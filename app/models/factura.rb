@@ -10,6 +10,7 @@ class Factura < ActiveRecord::Base
 
 	def fecha_cannot_be_in_the_past
 		if fecha < Date.today
+			
 			errors.add(:fecha, "no puede estar en el pasado")
 		end
 	end
